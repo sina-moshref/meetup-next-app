@@ -1,14 +1,19 @@
 import React from "react";
 import MeetupDetail from "../../components/meetups/MeetupDetail";
+import Header from "../../components/layout/Head";
 
 const MeetupDetails = (props) => {
   return (
     <>
+      <Header
+        title={props.meetup.title}
+        description={props.meetup.description}
+      />
       <MeetupDetail
-        description={props.meetup?.description}
-        title={props.meetup?.title}
-        address={props.meetup?.address}
-        image={props.meetup?.image}
+        description={props.meetup.description}
+        title={props.meetup.title}
+        address={props.meetup.address}
+        image={props.meetup.image}
       />
     </>
   );

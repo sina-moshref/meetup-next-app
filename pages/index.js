@@ -1,5 +1,6 @@
 import React from "react";
 import MeatupList from "../components/meetups/MeetupList";
+import Header from "../components/layout/Head";
 
 const DUMMY_MEETUPS = [
   {
@@ -21,7 +22,15 @@ const DUMMY_MEETUPS = [
 ];
 
 const HomePage = (props) => {
-  return <MeatupList meetups={props.meetup} />;
+  return (
+    <>
+      <Header
+        title="React Meetups"
+        description="Browse a huge list of highly active meetups"
+      />
+      <MeatupList meetups={props.meetup} />
+    </>
+  );
 };
 
 // export async function getServerSideProps(context) {
